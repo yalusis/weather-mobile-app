@@ -19,3 +19,12 @@ buildscript {
 }
 
 apply plugin: "com.facebook.react.rootproject"
+
+allprojects {
+    repositories {
+        mavenCentral()
+        google()
+    }
+}
+
+def googleMapsApiKey = project.hasProperty('google.maps.api.key') ? project['google.maps.api.key'] : ""
